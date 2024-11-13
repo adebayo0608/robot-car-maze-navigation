@@ -5,7 +5,7 @@ from random import shuffle
 import numpy as np
 from tensorflow.keras.utils import to_categorical
 
-data_path = '../train_data'
+data_path = '../training_data'
 categories = os.listdir(data_path)
 labels = [i for i in range(len(categories))]
 
@@ -69,5 +69,5 @@ target = np.array(target)
 
 new_target = to_categorical(target)
 
-np.save('data/data', data)
-np.save('data/target', new_target)
+np.save('data/data.npy', data)
+np.save('data/target.npy', new_target)

@@ -52,14 +52,18 @@ try:
         elif key == ord('w'):
             lSpeed = 1
             rSpeed = 1
-            cv2.imwrite(f"../training_data/forward/fw_{fw_ct}.jpg", im)
+            cv2.imwrite(f"../training_data/forward/fw_{fw_ct}.jpg", img)
             fw_ct += 1
         elif key == ord('a'):
             lSpeed = -0.1
             rSpeed = 1
+            cv2.imwrite(f"../training_data/left/le_{le_ct}.jpg", img)
+            le_ct += 1
         elif key == ord('d'):
             lSpeed = 1
             rSpeed = -0.1
+            cv2.imwrite(f"../training_data/right/ri_{ri_ct}.jpg", img)
+            ri_ct += 1
         elif key == ord('s'):
             lSpeed = -1
             rSpeed = -1
